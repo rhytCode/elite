@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
 
     <link rel="stylesheet" type="text/css" href="login.css" />
 
@@ -25,13 +28,13 @@
 
 
         <div class="container">
+
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
-
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
+            <button id="myButton" class="float-left submit-button">Login</button>
 
-            <button type="submit">Login</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
@@ -42,7 +45,7 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
-<h5>New User?</h5>
+    <h5>New User?</h5>
     <span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newAccount">Create Account</span>
 
     <div class=" col-2 justify-content-md-center">
@@ -83,6 +86,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success" onclick="post()">Create Account</button>
+
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             id="modalclosebutton">Close</button>
 
@@ -91,6 +95,8 @@
             </div>
         </div>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
@@ -117,6 +123,11 @@
             }
         }
 
+    </script>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "./Admin_page";
+        };
     </script>
 </body>
 
