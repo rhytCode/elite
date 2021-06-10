@@ -13,7 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+    
 
 
     <link rel="stylesheet" type="text/css" href="Page.css" />
@@ -28,7 +31,7 @@
 
 <body>
     <div class="text-left">
-        <img src="./Logo.PNG" width="200" height="40" class="img-fluid" alt="Japotech Solutions">
+        <img src="./Logo.PNG" width="175" height="40" class="img-fluid" alt="Japotech Solutions">
     </div>
     <!--const arrayToRemainUnedited = JSON.parse(JSON.stringify(arrayUsedToBuildTable))-->
 
@@ -86,6 +89,66 @@
             </table>
         </div>
 
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        <script>
+            Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Japotech Solutions'
+    },
+    subtitle: {
+        text: 'Staff Performance'
+    },
+    xAxis: {
+        categories: [
+            'Jessica',
+            'Shanita',
+            'Joseph'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Clients'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} clients</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Prospecting',
+        data: [50, 71, 80]
+
+    }, {
+        name: 'Meeting',
+        data: [86, 78, 98]
+
+    }, {
+        name: 'Negotiation',
+        data: [48, 38, 39]
+
+    }, {
+        name: 'Closed',
+        data: [42, 33, 34]
+
+    }]
+});
+        </script>
     </body>
 
 </html>
