@@ -37,9 +37,14 @@
 
     <div class="text-right">
         <h3>Admin Profile
-            <a href="#" class="btn btn-success">
+            <a href="#" class="btn btn-success" id="LogoutButton">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
             </a>
+            <script type="text/javascript">
+                document.getElementById("LogoutButton").onclick = function () {
+                    location.href = "./AdminLogin.html";
+                };
+            </script>
         </h3>
     </div>
 
