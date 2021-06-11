@@ -12,7 +12,7 @@
     
 
 <link rel="stylesheet" type="text/css" href="login.css" />
-    <title>Admin Portal</title>
+    <title>Agent Portal</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <img src="./Logo.PNG" class="img-fluid" alt="Japotech Solutions">
     </div>
 
-    <h1 class="text-center">Admin Portal Login</h1>
+    <h1 class="text-center">Agent Portal Login</h1>
 
     <form action="action_page.php"method="post" class="login-form">
 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="button" class="cancelbtn" id="cancel">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
@@ -131,9 +131,16 @@
 
     </script>
     <script type="text/javascript">
+
         document.getElementById("myButton").onclick = function () {
-            location.href = "./AdminPage.html";
+            location.href = "./AgentPage.html";
         };
+        
+
+        document.getElementById("cancel").onclick = function () {
+            location.href = "./Landingpage.html";
+        };
+
     </script>
 </body>
 
