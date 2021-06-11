@@ -1,9 +1,9 @@
 
 form {
-    border: 3px solid #f1f1f1;
+    border: 3px solid #8DC26F;
     position: relative;
     z-index: 1;
-    background: #FFFFFF;
+    background: #8DC26F;
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
@@ -14,18 +14,18 @@ form {
   logo { float: left;
   
 }
-  body { background: #76b852; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-    background: -moz-linear-gradient(right, #76b852, #8DC26F);
-    background: -o-linear-gradient(right, #76b852, #8DC26F);
-    background: linear-gradient(to left, #76b852, #8DC26F);
+  body { background: #fdfdfd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #ffffff, #ffffff);
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    background: linear-gradient(to left, #ffffff, #ffffff);
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     padding: 20px;     
   }
 
-  
+
   input[type=text], input[type=password]{
     width: 100%;
     padding: 12px 20px;
