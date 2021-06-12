@@ -12,9 +12,10 @@
     <style>
         body {
             margin: 0;
-            background-image: url(photo3.jpg);
+            background-color: white;
+          /*  background-image: url(photo3.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover;*/
             /* width: 80%;
             margin: 0 auto; */
         }
@@ -22,7 +23,7 @@
         h2 {
             text-align: center;
         text-decoration: black;
-        color: whitesmoke;
+        color: black;
 
         }
 
@@ -133,6 +134,24 @@
                                 <div id="fullNameHelp" class="form-text">Service of interest:</div>
                             </div>
 
+                        <!-- <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li><a href="#" data-value="action">Action</a></li>
+      <li><a href="#" data-value="another action">Another action</a></li>
+      <li><a href="#" data-value="something else here">Something else here</a></li>
+      <li><a href="#" data-value="separated link">Separated link</a></li>
+    </ul>
+  </div>
+  <script>
+      $(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+  </script> -->   
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -150,6 +169,8 @@
     <h2>Welcome to Japotech Solutions Limited!</h2>
     <h2>We offer quality and cost effective Telecom, IT and Training services as detailed below;</h2>
 
+
+    
     <div class="container">
         <div class="flex-item first">
             <h4>Telecom Services</h4>
@@ -196,6 +217,11 @@
         crossorigin="anonymous"></script>
         <script>
 
+/* $(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+}); */
+
             function post() {
                 let names = document.getElementById("full_name").value;
                 let email = document.getElementById("Email_Address").value;
@@ -220,6 +246,7 @@
                 
             }
     
+ 
         </script>
 
 </body>
