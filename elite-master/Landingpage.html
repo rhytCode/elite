@@ -7,13 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="Landingpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         body {
             margin: 0;
             background-color: white;
-          /*  background-image: url(photo3.jpg);
+            /*  background-image: url(photo3.jpg);
             background-repeat: no-repeat;
             background-size: cover;*/
             /* width: 80%;
@@ -22,43 +22,8 @@
 
         h2 {
             text-align: center;
-        text-decoration: black;
-        color: black;
-
-        }
-
-        /* flex container styles */
-        .container {
-            /* background-color: #000; */
-            padding: 20px;
-            align-items: center;
-            margin: 0;
-            display: flex;
-            /* flex-direction: row;*/
-            flex-wrap:wrap; 
-           
-            /* combines flex-direction and flex-wrap */
-            /* justify-content: flex-end; */
-            justify-content: center;
-            /* align-items: baseline; */
-            align-items: center;
-            align-content: center;
-
-        }
-
-        /* flex item styles */
-        .flex-item {
-        background:#76b852;
-            height: 300px;
-            width: 300px;
-            padding: 13px;
-            margin: 30px;
-            border-radius: 20px;
-            /* overflow: hidden; */
-            order: 3;
-            /* flex-grow: 2;
-            flex-basis: 20% */
-            flex: none;
+            text-decoration: black;
+            color: black;
 
         }
 
@@ -72,34 +37,41 @@
 
 <body>
     <div class="menu-bar">
-        <img src="logo.png" class="pen" alt="Japotech Sloutions" height="100px" width="50px">
-        <ul>
-            <li class="active"><a href="/"><i class="fa fa-home "></i> Home</a> </li>
-            <li><a href="AgentLogin.html"><i class="fa fa-lock "></i>Agent's Portal</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="AgentLogin.html">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="/AdminLogin.html"> <i class="fa fa-lock "></i> Admin Portal</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="AdminLogin.html">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
-                </div>
+        <div class="container">
+            <ul class="nav text-end">
+                <a class="navbar-brand" href="#">
+                    <img src="Logo.PNG" alt="Japotech Sloutions" height="100px">
+                </a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home "></i> Home</a>
+                </li>
 
-            </li>
-            <div class="contact">
-            <span><li><a  href="#" data-bs-toggle="modal" data-bs-target="#contact"> <i class="fa fa-phone "></i> </a> Contact Us </li>
-            </span> 
-        </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false"><i class="fa fa-lock "></i> Agent's Portal</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="AgentLogin.html">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false"><i class="fa fa-lock "></i> Admin Portal</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="AgentLogin.html">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#contact"><i
+                            class="fa fa-phone "></i> Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    </div>
-    
-   
+
+
 
     <div class=" col-2 justify-content-md-center">
 
@@ -120,38 +92,26 @@
 
                             <div class="mb-3">
                                 <label for="Email_Address" class="form-label">Email Address:</label>
-                                <input type="email" class="form-control" id="Email_Address" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="Email_Address"
+                                    aria-describedby="emailHelp">
                                 <div id="fullNameHelp" class="form-text">Your Email Address</div>
                             </div>
                             <div class="mb-3">
                                 <label for="Telephonenumber" class="form-label">Telephone Number:</label>
-                                <input type="text" class="form-control" id="Telephonenumber" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="Telephonenumber"
+                                    aria-describedby="emailHelp">
                                 <div id="fullNameHelp" class="form-text">Your telephone number</div>
                             </div>
                             <div class="mb-3">
                                 <label for="services" class="form-label">Service of interest:</label>
-                                <input type="text" class="form-control" id="services" aria-describedby="emailHelp">
-                                <div id="fullNameHelp" class="form-text">Service of interest:</div>
+                                <select class="form-control" id="services">
+                                    <option value="">Select Service of Interest</option>
+                                    <option value="Telecom Services">Telecom Services</option>
+                                    <option value="IT Services">IT Services</option>
+                                    <option value="Training Services">Training Services</option>
+                                </select>
+                                <div id="fullNameHelp" class="form-text">Click to Select Service of Interest</div>
                             </div>
-
-                        <!-- <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Dropdown
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-      <li><a href="#" data-value="action">Action</a></li>
-      <li><a href="#" data-value="another action">Another action</a></li>
-      <li><a href="#" data-value="something else here">Something else here</a></li>
-      <li><a href="#" data-value="separated link">Separated link</a></li>
-    </ul>
-  </div>
-  <script>
-      $(".dropdown-menu li a").click(function(){
-  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-});
-  </script> -->   
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -165,89 +125,141 @@
             </div>
         </div>
     </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="height: 100vh;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="slider1.jpg" style="height: 100vh;" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to Japotech Solutions Limited!</h5>
+                    <h5>Quality and cost effective Telecom, IT and Training services</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="slider1.jpg" style="height: 100vh;" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to Japotech Solutions Limited!</h5>
+                    <h5>TELECOM SERVICES | IT SERVICES | TRAINING SERVICES</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- <h2>Welcome to Japotech Solutions Limited!</h2> -->
+    <br>
+    <br>
+    <h2>OUR SERVICES</h2>
 
-    <h2>Welcome to Japotech Solutions Limited!</h2>
-    <h2>We offer quality and cost effective Telecom, IT and Training services as detailed below;</h2>
-
-
-    
     <div class="container">
-        <div class="flex-item first">
-            <h4>Telecom Services</h4>
-            <div class="services">
-                <ul>
-                    <li>Telecom Site Installations - Radio & Microwave </li>
-                    <li> Internet Connectivity and Installation</li>
-                    <li>Drive Test Optimization</li>
-                    <li>Other Telecom Services</li>
-                </ul>
+        <div class="row g-5">
+            <div class="card col">
+                <img src="telecom.jpg" class="card-img-top img img-responsive"
+                    style="width: 100%; aspect-ratio: auto 360 / 270; height: 270px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Telecom Services</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Telecom Site Installations - Radio & Microwave </li>
+                        <li> Internet Connectivity and Installation</li>
+                        <li>Drive Test Optimization</li>
+                        <li>Other Telecom Services</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card col">
+                <img src="programming.jpg" class="card-img-top img img-responsive"
+                    style="width: 100%; aspect-ratio: auto 360 / 270; height: 270px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">IT services</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Find Nyumba mobile App</li>
+                        <li>Website development</li>
+                        <li>Other IT Services</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card col">
+                <img src="training.jpg" class="card-img-top img img-responsive"
+                    style="width: 100%; aspect-ratio: auto 360 / 270; height: 270px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Training Services</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Mobile Telecom System Fundamentals (3GPP GSM/3G/4G/5G)</li>
+                        <li> Network Optimization & Drive Test Training</li>
+                        <li> Internet PMP Installations Training</li>
+                        <li> Software Development Training</li>
+                        <li> Telecom Installations Training</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="flex-item">
-
-            <h4>IT Services</h4>
-            <div class="services">
-                <ul>
-                    <li>Find Nyumba mobile App</li>
-                    <li>Website development</li>
-                    <li>Other IT Services</li>
-                </ul>
-            </div>
+    </div>
+    <footer class="py-4" style="background-color:#76b852">
+        <div class="container">
+            <p class="m-0 text-left text-white text-center">Copyright &copy; Japotech Solutions 2021</p>
         </div>
-        <div class="flex-item">
-
-            <h4>Training Services</h4>
-            <div class="services">
-                <ul>
-                    <li>Mobile Telecom System Fundamentals (3GPP GSM/3G/4G/5G)</li>
-                    <li> Network Optimization & Drive Test Training</li>
-                    <li> Internet PMP Installations Training</li>
-                    <li> Software Development Training</li>
-                    <li> Telecom Installations Training</li>
-                </ul>
-            </div>
-
-
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        <!-- /.container -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
-        <script>
+    <script>
 
-/* $(".dropdown-menu li a").click(function(){
-  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-}); */
+        /* $(".dropdown-menu li a").click(function(){
+          $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+          $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+        }); */
 
-            function post() {
-                let names = document.getElementById("full_name").value;
-                let email = document.getElementById("Email_Address").value;
-                let telephone=document.getElementById("Telephonenumber").value;
-                let Service = document.getElementById("services").value;
-                if (names === "") {
-                    alert("Please Enter Fullname");
-                    return false;
-                }
-                if (email === "") {
-                    alert("Please Enter Email address");
-                    return false;
-                }
-                if (telephone === "") {
-                    alert("Please Enter telephone Number");
-                    return false;
-                }
-                if (Service === "") {
-                    alert("Please Enter Service of interest");
-                    return false;
-                }
-                
+        function post() {
+            let names = document.getElementById("full_name").value;
+            let email = document.getElementById("Email_Address").value;
+            let telephone = document.getElementById("Telephonenumber").value;
+            let Service = document.getElementById("services").value;
+            if (names === "") {
+                alert("Please Enter Fullname");
+                return false;
             }
-    
- 
-        </script>
+            if (email === "") {
+                alert("Please Enter Email address");
+                return false;
+            }
+            if (telephone === "") {
+                alert("Please Enter telephone Number");
+                return false;
+            }
+            if (Service === "") {
+                alert("Please Enter Service of interest");
+                return false;
+            }
+
+        }
+
+
+    </script>
 
 </body>
 
