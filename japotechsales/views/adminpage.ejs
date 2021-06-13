@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+
+    <title><%= title %></title>
+    <style>
+        body {
+            background-color: rgb(198, 238, 201);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-left">
+        <img src="/images/Logo.PNG" width="175" height="40" class="img-fluid" alt="Japotech Solutions">
+    </div>
+    <!--const arrayToRemainUnedited = JSON.parse(JSON.stringify(arrayUsedToBuildTable))-->
+
+    <div class="text-right">
+        <h3>Admin Profile
+            <a href="/logout" class="btn btn-success" id="LogoutButton">
+                <span class="glyphicon glyphicon-log-out"></span> Log out
+            </a>
+        </h3>
+    </div>
+
+
+    <body>
+
+        <div class="container">
+            <div class="center">
+                <h2>Report Table</h2>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Date Registered</th>
+                        <th>Client Name</th>
+                        <th>Status</th>
+                        <th>Agent Incharge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13/05/2021</td>
+                        <td>John Doe</td>
+                        <td>Prospecting</td>
+                        <td>Jessica</td>
+                    </tr>
+                    <tr>
+                        <td>3/06/2021</td>
+                        <td>Mary Moe</td>
+                        <td>Meeting</td>
+                        <td>Shanita</td>
+                    </tr>
+                    <tr>
+                        <td>10/04/2021</td>
+                        <td>Musa Moses</td>
+                        <td>Closed</td>
+                        <td>Shanita</td>
+                    </tr>
+                    <tr>
+                        <td>13/05/2021</td>
+                        <td>July Dooley</td>
+                        <td>Negotiation</td>
+                        <td>Joseph</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        <script>
+            Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Japotech Solutions'
+    },
+    subtitle: {
+        text: 'Staff Performance'
+    },
+    xAxis: {
+        categories: [
+            'Jessica',
+            'Shanita',
+            'Joseph'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Clients'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} clients</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Prospecting',
+        data: [50, 71, 80]
+
+    }, {
+        name: 'Meeting',
+        data: [86, 78, 98]
+
+    }, {
+        name: 'Negotiation',
+        data: [48, 38, 39]
+
+    }, {
+        name: 'Closed',
+        data: [42, 33, 34]
+
+    }]
+});
+        </script>
+    </body>
+
+</html>
+
+</body>

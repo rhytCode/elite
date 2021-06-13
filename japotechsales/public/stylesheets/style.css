@@ -1,0 +1,160 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h2{
+  color: rgb(17, 17, 16);
+  margin: 20px 10px 0px;
+  padding: 0px 30px 0px 30px
+}
+
+.center {
+  text-align: center;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+}
+
+
+
+input[type=text],input[type=email], input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-flex;
+  border: 1px solid rgb(161, 159, 159);
+  box-sizing: border-box;
+}
+
+
+button{
+  background-color: #3b9e14;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.login-form{
+  width: 50%;
+  margin:auto;
+}
+
+.newAccount{
+  width: 50%;
+  margin:auto;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+
+.menu-bar {
+
+  background:rgb(0,100,0);
+  text-align: center;
+}
+.menu-bar ul {
+
+  display: inline-flex    ;
+  list-style: none;
+  color: #000;
+
+}
+.menu-bar ul li {
+  margin: 15px;
+  padding: 15px;
+}
+.menu-bar ul li a{
+ text-decoration: none;
+ color: #fff;
+
+}
+.pen  {
+  position: relative;
+  margin: 0px;
+  height: 100px;
+  width: 100px;
+  right:  250px;
+  border-radius: 20px;
+  padding: 10px;
+  top: 30px;
+
+}
+.active,  .menu-bar ul li:hover
+{
+  background:#2bab0d;
+  border-radius: 3px;
+
+}
+.menu-bar .fa {
+  margin-right: 8px;
+
+
+}
+.sub-menu-1 {
+  display:none ;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position :absolute;
+  background :rgb(0,100,0,);
+  margin-top:15px;
+  margin-left:-15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius: 0%;
+  text-align: center;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+  border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+  color:#b2ff00;
+}
